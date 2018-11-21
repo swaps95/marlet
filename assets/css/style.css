@@ -1,0 +1,728 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2.Common Styling
+  3. Header / .header
+    3.1 Logo  
+    3.2 Navigation / .navbar
+  4. Main
+    4.1. Banner
+    4.2. slider 
+    4.3. Our work
+    4.4  Dublin
+    4.5  What we do
+    
+  5. Footer / .footer
+  6.Media query
+
+  ------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* ==========================================================================
+   2.Common Styling
+   ========================================================================== */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container { width: 100%; }
+
+.wrapper {
+	max-width: 1500px;
+  width: 94%;
+  margin: 0 auto;
+}
+
+
+body { font-family: Arial; }
+ul li { list-style: none; }
+img { width: 100%; }
+.uppercase { text-transform: uppercase; }
+.first-letter:first-letter { text-transform: capitalize; }
+.block { display: block; }
+.centre { text-align: center; }
+
+.inline-block { 
+  display: inline-block;
+  vertical-align: top;
+}
+
+.transition {
+   -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   3.Header
+
+
+   ========================================================================== */
+
+
+    /* 3.1 Logo */
+
+.hamburger{
+	display: none;
+}
+header{
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+}
+header .wrapper{
+	max-width: 1500px;
+  width: 94%;
+  margin: 0 auto;
+}
+h1 {
+	display: inline-block;
+	width:17%;
+	padding-top: 17px;
+}
+
+
+   /* 3.2 Navigation */
+
+
+nav{
+	display: inline-block;
+	float: right;
+	padding-top: 36px;
+}
+.header li{
+	display: inline-block;
+}
+.header li:not(:first-child){
+	padding-left: 45px;
+}
+.header a{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+.header a:hover{
+	color: #f5821f;
+	transition: 0.2s;
+	border-bottom: 1px solid #f5821f;
+	padding-bottom: 5px;
+}
+
+  /* ==========================================================================
+   4.Main
+   ========================================================================== */
+
+/* 4.1 Banner */
+
+
+
+.banner{
+	background-image: url(../images/Aerial_Night_dark2.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	position: relative;
+
+}
+.hero-text{
+	padding-top: 20%;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+
+}
+.hero-text p:first-child{
+	font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+	padding-bottom: 38px;
+}
+.hero-text h2{
+	font-size: 3rem;
+  line-height: 1.2;
+	margin: 0 15%;
+}
+
+/* 4.2 slider */
+
+
+.slider{
+	border-bottom: 1px solid #ebebeb;
+	background-color: #f2f2f2;
+	
+}
+.slider-text{
+	padding: 162px 100px;
+}
+.slider-text p:first-child{
+	width: 62%;
+	display: inline-block;
+	font-size: 42px;
+	vertical-align: top;
+	text-transform: capitalize;
+	font-weight: 900;
+	color: #002147;
+	padding-top: 45px;
+}
+.rigth-side{
+	display: inline-block;
+	width: 34%;
+	vertical-align: bottom;
+	text-align: center;
+	padding-left: 30px;
+}
+.rigth-side span{
+	font-size: 120px;
+	font-weight 900;
+	color: #f5821f;
+}
+.rigth-side p{
+	color: #002147;
+	font-weight: 900;
+	font-size: 18px;
+
+}
+
+.slider .slick-dots {
+  position: absolute;
+  bottom: 44%;
+	right: 48%;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+	transform: rotate(90deg);
+
+}
+.slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slider .slick-dots li button {
+  display: none;
+}
+.slider .slick-dots li:before {
+  top: 1px;
+  transition: all 0.5s;
+  content: "";
+  width: 12px;
+  height: 12px;
+	border-radius: 50%;
+  background-color: #f5821f;
+  position: absolute;
+}
+.slider .slick-dots li.slick-active:before {
+  top: 0;
+  width: 14px;
+  height: 14px;
+  margin-left: -2px; 
+	border-radius: 50%;
+  background-color: #111;
+}
+
+
+
+
+
+/* 4.3 our work */
+
+
+
+.left{
+	width:49.8%;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 81px;
+	
+}
+.left .wrapper{
+	max-width: 1500px;
+  width: 60%;
+  margin: 0 auto;
+}
+.right{
+	width:49.8%;
+	display: inline-block;
+	vertical-align: top;
+}
+.our-work h3{
+	color: #f5821f;
+	font-weight: 600;
+	font-size: 28px;
+	padding-bottom: 78px;
+}
+.right img{height: 550px;}
+.work-text li P:first-child{
+	text-transform: uppercase;
+	color: #4c637e;
+	padding-bottom: 18px;
+}
+.work-text h4{
+	font-size: 42px;
+	font-weight: 600;
+	color: #002147;
+	padding-bottom: 27px;
+}
+
+.work-text p:nth-child(3){
+	font-size: 16px;
+  color: rgba(0,33,71,.7);
+  line-height: 1.6;
+  text-align: justify;
+	padding-bottom: 38px;
+}
+.work-text a{
+	color: #1d76a4;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 12px;
+}
+
+
+.left .slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.left .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.left .slick-dots li button {
+  display: none;
+}
+
+.left .slick-dots li:before {
+  top: 1px;
+  transition: all 0.5s;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+	border-radius: 50%;
+  position: absolute;
+}
+.left .slick-dots li.slick-active:before {
+  top: 0;
+  width: 8px;
+  height: 8px;
+  margin-left: -2px;
+  background-color: #f5821f;
+	
+}
+
+
+
+
+.right .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.right .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.right .slick-dots li button {
+  display: none;
+}
+
+.right .slick-dots li:before {
+  top: 1px;
+  transition: all 0.5s;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+	border-radius: 50%;
+  position: absolute;
+}
+.right .slick-dots li.slick-active:before {
+  top: 0;
+  width: 8px;
+  height: 8px;
+  margin-left: -2px;
+  background-color: #f5821f;
+	
+}
+
+
+
+/* 4.4 dublin */
+
+.dublin{
+	background-color: #f2f2f2;
+}
+
+.dublin .wrapper{
+	max-width: 1500px;
+  width: 55%;
+  margin: 0 auto;
+	padding: 230px 0 210px;
+	text-align: center;
+}
+.dublin p{
+	font-weight: 400;
+	font-size: 38px;
+	color:#002147;
+	padding-bottom: 60px;
+}
+.dublin span{
+	font-weight: 900;
+	font-size: 37px;
+}
+
+.dublin a{
+	text-transform:uppercase;
+	font-size: 14px;
+	color: #f5821f;
+	font-weight: 600;
+	padding-bottom: 8px;
+	border-bottom: 2px solid #f5821f;
+}
+
+.dublin a:hover{
+	border-top: 2px solid #f5821f;
+	padding-top: 7px;
+	transition: 0.2s;
+}
+
+/* 4.5 What we do */
+
+.what-we-do{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.what-we-do .wrapper{
+	max-width: 1500px;
+  width: 89%;
+  margin: 0 auto;
+}
+
+.what-we-do h4::before {
+  width: 70px;
+  height: 2px;
+  background-color: #f5821f;
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0px;
+}
+
+.what-we-do h4{
+	font-size: 50px;
+	position: relative;
+	padding-top: 10px;
+	color:#002147;
+	padding-bottom: 85px;
+}
+	
+.what-we-do h4 span{
+	font-weight: 900;
+}
+.what-left{
+	width: 40.8%;
+	display: inline-block;
+	vertical-align: top;
+}
+.what-right{
+	width: 58%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 130px;
+}
+.features>li>a{
+	font-size: 125%;
+  font-family: Lora,serif;
+  color: #002147;
+	font-weight: 400;
+	padding:13px 0;
+	border-bottom: 1px solid #efefef;
+	display: block;
+  position: relative;
+}
+
+.what-right .fas{
+	position: absolute;
+  right: .5%;
+  top: 50%;
+  color: #30a4dc;
+  font-size: 30px;
+  margin-top: -19px;
+
+}
+
+
+   /* ==========================================================================
+   5.Footer
+   ========================================================================== */
+footer{
+	
+	background-color: black;
+
+}
+footer .wrapper{
+	max-width: 1500px;
+  width: 70%;
+  margin: 0 auto;
+	padding-top: 54px;
+	
+}
+.footer-top{
+	text-align: center;
+}
+.footer-top p:first-child{
+	color: #f48120;
+	font-weight: 700;
+	font-size: 24px;
+	padding-bottom: 25px;
+}
+.footer-top p:last-child{
+	font-size:16px;
+	color: #fff;
+	font-weight: 600;
+	padding-bottom: 20px;
+}
+.footer-bottom{
+	border-top: 1px solid #fff;
+	color: white;
+	padding:23px 0 30px;
+}
+.footer-bottom p:first-child{
+	float: left;
+}
+.footer-bottom p:last-child{
+  float: right;
+}
+
+
+   /* ==========================================================================
+   6.Media query
+   ========================================================================== */
+
+
+/* 6.1 Media query less than 1110px */
+
+@media only screen and (max-width: 1110px) {
+	h1{width: 25%;}
+	.left{
+		width:44%;
+		margin-right: 6.4%;
+	}
+	.hero-text h2{font-size: 2.5rem;}
+	.right{width: 49%;}
+	.work-text h4{font-size: 150%;}
+	.our-work h3{padding-bottom: 46px;}
+	.work-text p:nth-child(3){font-size: 100%;}
+	.features>li>a{font-size: 110%;}
+	.dublin .wrapper{padding:  18% 0 8%;}
+	.slider-text p:first-child{font-size: 225%;}
+	.footer-bottom p:first-child,.footer-bottom p:last-child{font-size: 85%;}
+
+}
+
+/* 6.1 Media query less than 767px */
+
+@media only screen and (max-width: 767px){
+	.hero-text p:first-child{padding-bottom: 50px;}
+	.hero-text h2{font-size: 2rem;}
+	.slider-text{padding: 100px 30px;}
+	.slider-text p:first-child{
+		text-align: center;
+		width: 100%;
+	}
+	.rigth-side{
+		width: 100%;
+		text-align: center;
+		padding-left: 0px;
+	}
+	
+	.left{
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+	.right{width: 100%;}
+	.dublin p{font-size: 25px;}
+	.dublin span{font-size: 25px;}
+	.what-we-do h4::before{width: 0}
+	.what-we-do h4{
+		text-align: center;
+		padding-bottom: 50px;
+	}
+	.what-left{
+		width: 100%;
+	}
+	.what-right{
+		padding-left: 0px;
+		padding-top: 20px;
+		width:100%
+	}
+	.footer-bottom p:first-child, .footer-bottom p:last-child{
+		float: none;
+		text-align: center;
+	}
+	
+	.hamburger{
+		display: inline-block;
+		float: right;
+		font-size: 24px;
+		padding-top: 33px;
+	}
+	
+	.header{
+		display: none;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 60px;
+		background-color: #f5821f;
+		text-align: center;
+	}
+	nav li{
+		padding: 20px 0 !important;
+		border-bottom: 1px solid #fff;
+	}
+	.header li:not(:first-child){padding: 0;}
+	.header li {display: block;}
+	.hamburger i{color: white;}
+	.slider .slick-dots{
+		bottom: 44%;
+	  right: 46%;
+	}
+	
+}
+
+/* 6. Media query less than 480px */
+
+@media only screen and (max-width: 480px){
+	.hero-text h2{font-size: 1.6rem;}
+
+}
+
